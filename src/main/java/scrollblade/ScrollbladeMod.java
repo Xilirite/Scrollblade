@@ -1,8 +1,10 @@
 package scrollblade;
 
+import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.interfaces.*;
-import scrollblade.character.MyCharacter;
+import scrollblade.cards.BaseCard;
+import scrollblade.character.ScrollbladeCharacter;
 import scrollblade.util.GeneralUtils;
 import scrollblade.util.KeywordInfo;
 import scrollblade.util.Sounds;
@@ -31,6 +33,7 @@ import java.util.*;
 
 @SpireInitializer
 public class ScrollbladeMod implements
+        EditCardsSubscriber,
         EditCharactersSubscriber,
         EditStringsSubscriber,
         EditKeywordsSubscriber,
@@ -52,7 +55,7 @@ public class ScrollbladeMod implements
     public static void initialize() {
         new ScrollbladeMod();
 
-        MyCharacter.Meta.registerColor();
+        ScrollbladeCharacter.Meta.registerColor();
     }
 
     public ScrollbladeMod() {
@@ -161,7 +164,7 @@ public class ScrollbladeMod implements
 
     @Override
     public void receiveEditCharacters() {
-        MyCharacter.Meta.registerCharacter();
+        ScrollbladeCharacter.Meta.registerCharacter();
     }
 
     @Override
@@ -276,5 +279,13 @@ public class ScrollbladeMod implements
         else {
             throw new RuntimeException("Failed to determine mod info/ID based on initializer.");
         }
+    }
+
+    @Override
+    public void receiveEditCards() {
+        new AutoAdd(modID) //Loads files from this mod
+                .packageFilter(BaseCard.class) //In the same package as this class
+                .setDefaultSeen(true) //And marks them as seen in the compendium
+                .cards(); //Adds the cards
     }
 }

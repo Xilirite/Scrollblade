@@ -4,5 +4,13 @@
     "DESCRIPTIONS": [
       "You are Very Cool and Strong."
     ]
+  },
+  "${modID}:Dictum": {
+    "NAME": "Dictum",
+    "DESCRIPTIONS": [
+      "Increases attack damage and #yBlock gained from cards by #b",
+      " for #b",
+      " turns."
+    ]
   }
 }
