@@ -12,5 +12,12 @@
       " for #b",
       " turns."
     ]
+  },
+  "${modID}:Bleed": {
+    "NAME": "Bleed",
+    "DESCRIPTIONS": [
+      "Lose #b",
+      " HP at the start of their turn. Each turn, #yBleed is reduced by half."
+    ]
   }
 }

@@ -12,5 +12,30 @@
   "${modID}:Strike": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
+  },
+  "${modID}:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "${modID}:Recitation": {
+    "NAME": "Recitation",
+    "DESCRIPTION": "Gain !M! Dictum."
+  },
+  "${modID}:ShieldOfScrolls": {
+    "NAME": "Shield of Scrolls",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Dictum."
+  },
+  "${modID}:Pursue": {
+    "NAME": "Pursue",
+    "DESCRIPTION": "Deal !D! damage. NL Replay your last played card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Replay your last played card."
+  },
+  "${modID}:CartwheelStrike": {
+    "NAME": "Cartwheel Strike",
+    "DESCRIPTION": "Deal !D! damage twice. NL Draw !M! cards."
+  },
+  "${modID}:JaggedSwipe": {
+    "NAME": "Jagged Swipe",
+    "DESCRIPTION": "Deal !D! damage. Apply !M! Bleed."
   }
 }

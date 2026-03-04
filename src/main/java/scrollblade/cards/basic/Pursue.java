@@ -9,8 +9,8 @@ import scrollblade.cards.BaseCard;
 import scrollblade.character.ScrollbladeCharacter;
 import scrollblade.util.CardStats;
 
-public class Strike extends BaseCard {
-    public static final String ID = makeID("Strike");
+public class Pursue extends BaseCard {
+    public static final String ID = makeID("Pursue");
     private static final CardStats info = new CardStats(
             ScrollbladeCharacter.Meta.CARD_COLOR,
             CardType.ATTACK,
@@ -18,16 +18,14 @@ public class Strike extends BaseCard {
             CardTarget.ENEMY,
             1
     );
-    private static final int DAMAGE = 6;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 7;
+    private static final int UPG_DAMAGE = 1;
 
-    public Strike() {
+    public Pursue() {
         super(ID, info);
 
         setDamage(DAMAGE, UPG_DAMAGE);
-
-        tags.add(CardTags.STARTER_STRIKE);
-        tags.add(CardTags.STRIKE);
+        setExhaust(true, false);
     }
 
     @Override
