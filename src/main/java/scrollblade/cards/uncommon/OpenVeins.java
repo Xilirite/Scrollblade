@@ -1,39 +1,37 @@
-package scrollblade.cards.common;
+package scrollblade.cards.uncommon;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import scrollblade.cards.BaseCard;
 import scrollblade.character.ScrollbladeCharacter;
+import scrollblade.powers.Bleed;
 import scrollblade.powers.Dictum;
 import scrollblade.util.CardStats;
 
-public class ShieldOfScrolls extends BaseCard {
-    public static final String ID = makeID("ShieldOfScrolls");
+public class OpenVeins extends BaseCard {
+    public static final String ID = makeID("OpenVeins");
     private static final CardStats info = new CardStats(
             ScrollbladeCharacter.Meta.CARD_COLOR,
             CardType.SKILL,
-            CardRarity.COMMON,
-            CardTarget.SELF,
+            CardRarity.UNCOMMON,
+            CardTarget.ENEMY,
             1
     );
-    private static final int BLOCK = 6;
-    private static final int UPG_BLOCK = 2;
-    private static final int MAGIC = 1;
-    private static final int UPG_MAGIC = 1;
+    private static final int MAGIC = 18;
+    private static final int UPG_MAGIC = 8;
 
-    public ShieldOfScrolls() {
+    public OpenVeins() {
         super(ID, info);
 
-        setBlock(BLOCK, UPG_BLOCK);
         setMagic(MAGIC, UPG_MAGIC);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new GainBlockAction((AbstractCreature)p, (AbstractCreature)p, this.block));
-        addToBot(new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p, new Dictum((AbstractCreature)p, magicNumber)));
+        addToBot(new ApplyPowerAction((AbstractCreature)m, (AbstractCreature)p, new Bleed((AbstractCreature)m, this.magicNumber), this.magicNumber));
     }
 }

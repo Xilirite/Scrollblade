@@ -19,5 +19,12 @@
       "Lose #b",
       " HP at the start of their turn. Each turn, #yBleed is reduced by half."
     ]
+  },
+  "${modID}:SickThrillsPower": {
+    "NAME": "Sick Thrills",
+    "DESCRIPTIONS": [
+      "When dealing unblocked attack damage to an enemy with #yBleed, apply #b",
+      " #yBleed."
+    ]
   }
 }

@@ -42,5 +42,17 @@
     "NAME": "Twist the Knife",
     "DESCRIPTION": "Deal !D! damage. NL If the enemy has Bleed, gain Energy.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If the enemy has Bleed, gain two Energy."
+  },
+  "${modID}:Lacerate": {
+    "NAME": "Lacerate",
+    "DESCRIPTION": "Deal !D! damage and apply !M! Bleed 3 times."
+  },
+  "${modID}:OpenVeins": {
+    "NAME": "Open Veins",
+    "DESCRIPTION": "Apply !M! Bleed."
+  },
+  "${modID}:SickThrills": {
+    "NAME": "Sick Thrills",
+    "DESCRIPTION": "When an Attack deals unblocked damage, apply !M! Bleed."
   }
 }
