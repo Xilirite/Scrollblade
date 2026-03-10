@@ -37,5 +37,10 @@
   "${modID}:JaggedSwipe": {
     "NAME": "Jagged Swipe",
     "DESCRIPTION": "Deal !D! damage. Apply !M! Bleed."
+  },
+  "${modID}:TwistTheKnife": {
+    "NAME": "Twist the Knife",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Bleed, gain Energy.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If the enemy has Bleed, gain two Energy."
   }
 }

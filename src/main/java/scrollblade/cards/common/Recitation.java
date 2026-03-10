@@ -1,4 +1,4 @@
-package scrollblade.cards.basic;
+package scrollblade.cards.common;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

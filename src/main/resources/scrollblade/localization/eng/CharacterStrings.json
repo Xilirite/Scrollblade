@@ -1,8 +1,8 @@
 {
   "${modID}:Scrollblade": {
     "NAMES": [
-      "The Scrollblade (Displayed in character select)",
-      "the Scrollblade (but 'the' is lowercase, this is displayed at the top left during gameplay)"
+      "The Scrollblade",
+      "the Scrollblade"
     ],
     "TEXT": [
       "A student of both blade and tome. NL Uses her training to deftly execute foes.",
