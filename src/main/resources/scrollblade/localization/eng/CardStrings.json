@@ -62,5 +62,9 @@
   "${modID}:Exploit": {
     "NAME": "Exploit",
     "DESCRIPTION": "Deal !D! damage. NL Momentum: Apply !M! Vulnerable."
+  },
+  "${modID}:Flurry": {
+    "NAME": "Flurry",
+    "DESCRIPTION": "Deal !D! damage twice. NL Initiate Momentum."
   }
 }
