@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import scrollblade.cards.BaseCard;
 import scrollblade.character.ScrollbladeCharacter;
-import scrollblade.powers.Bleed;
+import scrollblade.powers.BleedPower;
 import scrollblade.util.CardStats;
 
 public class Lacerate extends BaseCard {
@@ -36,10 +36,10 @@ public class Lacerate extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        addToBot(new ApplyPowerAction((AbstractCreature)m, (AbstractCreature)p, new Bleed((AbstractCreature)m, this.magicNumber), this.magicNumber));
+        addToBot(new ApplyPowerAction((AbstractCreature)m, (AbstractCreature)p, new BleedPower((AbstractCreature)m, this.magicNumber), this.magicNumber));
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        addToBot(new ApplyPowerAction((AbstractCreature)m, (AbstractCreature)p, new Bleed((AbstractCreature)m, this.magicNumber), this.magicNumber));
+        addToBot(new ApplyPowerAction((AbstractCreature)m, (AbstractCreature)p, new BleedPower((AbstractCreature)m, this.magicNumber), this.magicNumber));
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        addToBot(new ApplyPowerAction((AbstractCreature)m, (AbstractCreature)p, new Bleed((AbstractCreature)m, this.magicNumber), this.magicNumber));
+        addToBot(new ApplyPowerAction((AbstractCreature)m, (AbstractCreature)p, new BleedPower((AbstractCreature)m, this.magicNumber), this.magicNumber));
     }
 }

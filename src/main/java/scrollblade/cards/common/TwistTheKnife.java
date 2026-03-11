@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import scrollblade.cards.BaseCard;
 import scrollblade.character.ScrollbladeCharacter;
-import scrollblade.powers.Bleed;
+import scrollblade.powers.BleedPower;
 import scrollblade.util.CardStats;
 
 public class TwistTheKnife extends BaseCard {
@@ -37,7 +37,7 @@ public class TwistTheKnife extends BaseCard {
     public void triggerOnGlowCheck() {
         this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         for (AbstractMonster m : (Iterable<AbstractMonster>)(AbstractDungeon.getCurrRoom()).monsters.monsters) {
-            if (!m.isDeadOrEscaped() && m.hasPower(Bleed.POWER_ID)) {
+            if (!m.isDeadOrEscaped() && m.hasPower(BleedPower.POWER_ID)) {
                 this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
                 break;
                 }
@@ -47,7 +47,7 @@ public class TwistTheKnife extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        if (m.hasPower(Bleed.POWER_ID)) {
+        if (m.hasPower(BleedPower.POWER_ID)) {
             addToBot(new GainEnergyAction(this.magicNumber));
         }
     }

@@ -1,15 +1,12 @@
 package scrollblade.cards.uncommon;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import scrollblade.cards.BaseCard;
 import scrollblade.character.ScrollbladeCharacter;
-import scrollblade.powers.Bleed;
-import scrollblade.powers.Dictum;
+import scrollblade.powers.BleedPower;
 import scrollblade.util.CardStats;
 
 public class OpenVeins extends BaseCard {
@@ -32,6 +29,6 @@ public class OpenVeins extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction((AbstractCreature)m, (AbstractCreature)p, new Bleed((AbstractCreature)m, this.magicNumber), this.magicNumber));
+        addToBot(new ApplyPowerAction((AbstractCreature)m, (AbstractCreature)p, new BleedPower((AbstractCreature)m, this.magicNumber), this.magicNumber));
     }
 }

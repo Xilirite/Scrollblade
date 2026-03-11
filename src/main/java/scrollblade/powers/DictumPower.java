@@ -8,12 +8,12 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static scrollblade.ScrollbladeMod.makeID;
 
-public class Dictum extends BasePower {
+public class DictumPower extends BasePower {
     public static final String POWER_ID = makeID("Dictum");
     private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.BUFF;
     private static final boolean TURN_BASED = true;
 
-    public Dictum(AbstractCreature owner, int amount) {
+    public DictumPower(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
     }
 

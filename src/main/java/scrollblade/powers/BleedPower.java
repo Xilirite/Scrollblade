@@ -12,12 +12,12 @@ import scrollblade.actions.BleedDamageAction;
 
 import static scrollblade.ScrollbladeMod.makeID;
 
-public class Bleed extends BasePower implements HealthBarRenderPower {
+public class BleedPower extends BasePower implements HealthBarRenderPower {
     public static final String POWER_ID = makeID("Bleed");
     private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.DEBUFF;
     private static final boolean TURN_BASED = true;
 
-    public Bleed(AbstractCreature owner, int amount) {
+    public BleedPower(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
     }
 

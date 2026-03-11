@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import scrollblade.cards.BaseCard;
 import scrollblade.character.ScrollbladeCharacter;
-import scrollblade.powers.Dictum;
+import scrollblade.powers.DictumPower;
 import scrollblade.util.CardStats;
 
 public class ShieldOfScrolls extends BaseCard {
@@ -34,6 +34,6 @@ public class ShieldOfScrolls extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction((AbstractCreature)p, (AbstractCreature)p, this.block));
-        addToBot(new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p, new Dictum((AbstractCreature)p, magicNumber)));
+        addToBot(new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p, new DictumPower((AbstractCreature)p, magicNumber)));
     }
 }

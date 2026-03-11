@@ -22,9 +22,9 @@ public class SickThrillsPower extends BasePower {
 
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         if (damageAmount > 0 && target != this.owner && info.type == DamageInfo.DamageType.NORMAL) {
-            if (target.hasPower(Bleed.POWER_ID)) {
+            if (target.hasPower(BleedPower.POWER_ID)) {
                 flash();
-                addToTop(new ApplyPowerAction(target, this.owner, new Bleed(target, this.amount), this.amount, true));
+                addToTop(new ApplyPowerAction(target, this.owner, new BleedPower(target, this.amount), this.amount, true));
             }
         }
     }
