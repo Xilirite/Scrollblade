@@ -54,5 +54,9 @@
   "${modID}:SickThrills": {
     "NAME": "Sick Thrills",
     "DESCRIPTION": "When an Attack deals unblocked damage, apply !M! Bleed."
+  },
+  "${modID}:StudyFoe": {
+    "NAME": "Study Foe",
+    "DESCRIPTION": "Gain !B! Block. Next turn, Initiate Momentum."
   }
 }

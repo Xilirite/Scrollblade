@@ -25,6 +25,7 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import scrollblade.cards.basic.Defend;
 import scrollblade.cards.basic.Pursue;
 import scrollblade.cards.basic.Strike;
+import scrollblade.cards.basic.StudyFoe;
 
 import java.util.ArrayList;
 
@@ -151,6 +152,7 @@ public class ScrollbladeCharacter extends CustomPlayer {
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);
         retVal.add(Pursue.ID);
+        retVal.add(StudyFoe.ID);
 
         return retVal;
     }
