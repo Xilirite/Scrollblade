@@ -66,5 +66,9 @@
   "${modID}:Flurry": {
     "NAME": "Flurry",
     "DESCRIPTION": "Deal !D! damage twice. NL Initiate Momentum."
+  },
+  "${modID}:BackOff": {
+    "NAME": "Back Off",
+    "DESCRIPTION": "Gain !B! Block. NL Momentum: Apply !M! Weak."
   }
 }
