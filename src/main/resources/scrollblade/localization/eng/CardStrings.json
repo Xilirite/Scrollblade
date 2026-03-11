@@ -57,6 +57,10 @@
   },
   "${modID}:StudyFoe": {
     "NAME": "Study Foe",
-    "DESCRIPTION": "Gain !B! Block. Next turn, Initiate Momentum."
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, Initiate Momentum."
+  },
+  "${modID}:Exploit": {
+    "NAME": "Exploit",
+    "DESCRIPTION": "Deal !D! damage. NL Momentum: Apply !M! Vulnerable."
   }
 }
