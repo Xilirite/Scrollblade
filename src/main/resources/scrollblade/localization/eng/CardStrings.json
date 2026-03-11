@@ -70,5 +70,13 @@
   "${modID}:BackOff": {
     "NAME": "Back Off",
     "DESCRIPTION": "Gain !B! Block. NL Momentum: Apply !M! Weak."
+  },
+  "${modID}:Pacing": {
+    "NAME": "Pacing",
+    "DESCRIPTION": "Gain !B! Block. NL Momentum: Gain !M! additional Block. NL Otherwise, Initiate Momentum."
+  },
+  "${modID}:HammerStrike": {
+    "NAME": "Hammer Strike",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Momentum: Draw a card."
   }
 }

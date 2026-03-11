@@ -10,8 +10,8 @@ import scrollblade.character.ScrollbladeCharacter;
 import scrollblade.powers.MomentumPower;
 import scrollblade.util.CardStats;
 
-public class BackOff extends BaseCard {
-    public static final String ID = makeID("BackOff");
+public class Pacing extends BaseCard {
+    public static final String ID = makeID("Pacing");
     private static final CardStats info = new CardStats(
             ScrollbladeCharacter.Meta.CARD_COLOR,
             CardType.SKILL,
@@ -19,12 +19,12 @@ public class BackOff extends BaseCard {
             CardTarget.ENEMY,
             1
     );
-    private static final int BLOCK = 6;
+    private static final int BLOCK = 3;
     private static final int UPG_BLOCK = 2;
-    private static final int MAGIC = 1;
-    private static final int UPG_MAGIC = 1;
+    private static final int MAGIC = 7;
+    private static final int UPG_MAGIC = 2;
 
-    public BackOff() {
+    public Pacing() {
         super(ID, info);
 
         setBlock(BLOCK, UPG_BLOCK);
@@ -35,7 +35,9 @@ public class BackOff extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, this.block));
         if (p.hasPower(MomentumPower.POWER_ID)) {
-            addToBot(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber));
+            addToBot(new GainBlockAction(p, p, this.magicNumber));}
+        else {
+            addToBot(new ApplyPowerAction(p, p, new MomentumPower(p, 1), 1));
         }
     }
 }
