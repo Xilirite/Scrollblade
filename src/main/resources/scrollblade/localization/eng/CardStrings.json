@@ -83,5 +83,9 @@
     "NAME": "Inhale",
     "DESCRIPTION": "Draw cards equal to your Momentum. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Draw cards equal to your Momentum."
+  },
+  "${modID}:Inhale": {
+    "NAME": "Inhale",
+    "DESCRIPTION": "Draw cards and gain [E] equal to your Dictum. NL Exhaust."
   }
 }
