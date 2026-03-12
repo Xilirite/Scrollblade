@@ -1,6 +1,7 @@
 package scrollblade.powers;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -19,12 +20,11 @@ public class StudyFoePower extends BasePower {
     public void atStartOfTurn() {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             flash();
-            addToBot(new ApplyPowerAction((AbstractCreature) this.owner, (AbstractCreature) this.owner, new MomentumPower((AbstractCreature) this.owner, 1)));
+            addToBot(new ApplyPowerAction(this.owner, this.owner, new MomentumPower(this.owner, 1)));
+            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
     }
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0];
     }
-
-
 }

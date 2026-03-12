@@ -20,7 +20,7 @@ public class MomentumPower extends BasePower {
     }
 
     public void onUseCard (AbstractCard card, UseCardAction action) {
-        if (card.cost == this.amount) {
+        if (card.cost == this.amount || card.cost == -1 && card.energyOnUse == this.amount) {
             addToBot(new GainEnergyAction(1));
             addToBot(new ApplyPowerAction((AbstractCreature)this.owner, (AbstractCreature)this.owner, new MomentumPower((AbstractCreature)this.owner, 1)));
         }

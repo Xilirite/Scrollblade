@@ -3,7 +3,6 @@ package scrollblade.cards.basic;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import scrollblade.cards.BaseCard;
 import scrollblade.character.ScrollbladeCharacter;
@@ -30,7 +29,7 @@ public class StudyFoe extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new GainBlockAction((AbstractCreature)p, (AbstractCreature)p, this.block));
-        addToBot(new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p, new StudyFoePower((AbstractCreature)p, 1)));
+        addToBot(new GainBlockAction(p, p, this.block));
+        addToBot(new ApplyPowerAction(p, p, new StudyFoePower(p, 1)));
     }
 }

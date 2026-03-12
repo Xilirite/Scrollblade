@@ -25,11 +25,11 @@ public class HammerStrike extends BaseCard {
             ScrollbladeCharacter.Meta.CARD_COLOR,
             CardType.ATTACK,
             CardRarity.COMMON,
-            CardTarget.ENEMY,
+            CardTarget.ALL_ENEMY,
             3
     );
-    private static final int DAMAGE = 7;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 18;
+    private static final int UPG_DAMAGE = 6;
     private static final int MAGIC = 1;
 
     public HammerStrike() {
@@ -41,10 +41,7 @@ public class HammerStrike extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (m != null)
-            addToBot(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY)));
-        addToBot(new WaitAction(0.8F));
-        addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+        addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         if (p.hasPower(MomentumPower.POWER_ID)) {
             addToBot(new DrawCardAction(this.magicNumber));
         }

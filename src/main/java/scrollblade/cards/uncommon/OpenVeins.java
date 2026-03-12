@@ -15,16 +15,17 @@ public class OpenVeins extends BaseCard {
             ScrollbladeCharacter.Meta.CARD_COLOR,
             CardType.SKILL,
             CardRarity.UNCOMMON,
-            CardTarget.ENEMY,
-            1
+            CardTarget.SELF,
+            2
     );
-    private static final int MAGIC = 18;
+    private static final int MAGIC = 16;
     private static final int UPG_MAGIC = 8;
 
     public OpenVeins() {
         super(ID, info);
 
         setMagic(MAGIC, UPG_MAGIC);
+        setExhaust(true);
     }
 
     @Override
