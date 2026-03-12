@@ -13,6 +13,14 @@
       " turns."
     ]
   },
+    "${modID}:SacrilegePower": {
+      "NAME": "Sacrilege",
+      "DESCRIPTIONS": [
+        "Decreases attack damage and #yBlock gained from cards by #b",
+        " for #b",
+        " turns."
+      ]
+    },
   "${modID}:Bleed": {
     "NAME": "Bleed",
     "DESCRIPTIONS": [
@@ -31,7 +39,7 @@
     "NAME": "Momentum",
     "DESCRIPTIONS": [
       "When playing a card that costs #b",
-      ", gain 1 Energy and 1 #yMomentum."
+      ", gain [E] and 1 #yMomentum."
     ]
   },
   "${modID}:StudyFoePower": {

@@ -40,8 +40,8 @@
   },
   "${modID}:TwistTheKnife": {
     "NAME": "Twist the Knife",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Bleed, gain Energy.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If the enemy has Bleed, gain two Energy."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Bleed, gain [E] .",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If the enemy has Bleed, gain [E] [E] ."
   },
   "${modID}:Lacerate": {
     "NAME": "Lacerate",
@@ -78,5 +78,10 @@
   "${modID}:HammerStrike": {
     "NAME": "Hammer Strike",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Momentum: Draw a card."
+  },
+  "${modID}:Inhale": {
+    "NAME": "Inhale",
+    "DESCRIPTION": "Draw cards equal to your Momentum. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw cards equal to your Momentum."
   }
 }

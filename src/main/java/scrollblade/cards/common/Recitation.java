@@ -31,6 +31,6 @@ public class Recitation extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster M) {
-        addToBot(new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p, new DictumPower((AbstractCreature)p, magicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new DictumPower(p, magicNumber)));
     }
 }

@@ -43,7 +43,9 @@ public class HammerStrike extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         if (p.hasPower(MomentumPower.POWER_ID)) {
-            addToBot(new DrawCardAction(this.magicNumber));
+            if (p.getPower(MomentumPower.POWER_ID).amount == cost) {
+                addToBot(new DrawCardAction(this.magicNumber));
+            }
         }
     }
 }

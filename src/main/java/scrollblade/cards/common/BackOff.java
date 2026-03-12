@@ -35,7 +35,9 @@ public class BackOff extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, this.block));
         if (p.hasPower(MomentumPower.POWER_ID)) {
-            addToBot(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber));
+            if (p.getPower(MomentumPower.POWER_ID).amount == cost) {
+                addToBot(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber));
+            }
         }
     }
 }
