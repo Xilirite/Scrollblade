@@ -46,6 +46,16 @@
     "NAME": "Studying...",
     "DESCRIPTIONS": [
       "Next turn, Initiate Momentum."
+
+    ]
+  },
+  "${modID}:HeresiarchPower": {
+    "NAME": "Heresiarch",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " [E] and draw #b",
+      " cards, #b",
+      " times"
     ]
   }
 }

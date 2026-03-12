@@ -84,8 +84,13 @@
     "DESCRIPTION": "Draw cards equal to your Momentum. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Draw cards equal to your Momentum."
   },
-  "${modID}:Inhale": {
-    "NAME": "Inhale",
+  "${modID}:Revelation": {
+    "NAME": "Revelation",
     "DESCRIPTION": "Draw cards and gain [E] equal to your Dictum. NL Exhaust."
+  },
+  "${modID}:PurgeDoubt": {
+    "NAME": "Purge Doubt",
+    "DESCRIPTION": "Gain Dictum equal to your Sacrilege. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain Dictum equal to your Sacrilege."
   }
 }
