@@ -51,6 +51,7 @@ public abstract class BaseCard extends CustomCard {
     protected boolean upgInnate = false;
     protected boolean baseRetain = false;
     protected boolean upgRetain = false;
+    protected boolean isReplay = false;
 
     final protected Map<String, LocalVarInfo> cardVariables = new HashMap<>();
 
@@ -395,6 +396,9 @@ public abstract class BaseCard extends CustomCard {
         this.baseRetain = baseRetain;
         this.upgRetain = upgRetain;
         this.selfRetain = baseRetain;
+    }
+    protected void setIsReplay(boolean isReplay) {
+        this.isReplay = isReplay;
     }
 
 

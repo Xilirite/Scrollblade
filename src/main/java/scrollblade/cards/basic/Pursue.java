@@ -26,6 +26,7 @@ public class Pursue extends BaseCard {
 
         setDamage(DAMAGE, UPG_DAMAGE);
         setExhaust(true, false);
+        isReplay = false;
     }
 
     @Override
