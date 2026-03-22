@@ -24,6 +24,8 @@ public class EchoingStrike extends BaseCard {
     private static final int DAMAGE = 7;
     private static final int UPG_DAMAGE = 3;
     private static final int MAGIC = 1;
+    private int ATTACKS = 1;
+    public boolean isReplay = false;
 
     public EchoingStrike() {
         super(ID, info);
@@ -32,15 +34,13 @@ public class EchoingStrike extends BaseCard {
         setMagic(MAGIC);
     }
 
-    public class CardReplayCheck {}
-
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-        if (p.hasPower(MomentumPower.POWER_ID)) {
-            if (p.getPower(MomentumPower.POWER_ID).amount == cost) {
-                addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
-            }
+        for (int i = 0; i < this.ATTACKS; i++) {
+            addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        }
+        if (isReplay) {
+            this.ATTACKS += 1;
         }
     }
 }
